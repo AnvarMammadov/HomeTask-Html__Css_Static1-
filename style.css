@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+
+  /* list-style: none;
+  text-decoration: none; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 370px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.wrapper .header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.wrapper .header button {
+  padding: 10px 0;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #acaebc;
+}
+
+.wrapper .header button.active {
+  background-color: #9092a5;
+  color: white;
+}
+
+.wrapper .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-item {
+  width: calc((100% - 10px) / 2);
+  border: 1px solid #ddd;
+  padding: 15px;
+  background: var(--bgclr);
+  background: var(--bggrclr);
+  border-radius: 10px;
+}
+
+.card-item * {
+  color: white;
+}
+
+.card-item .card-item_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.card-item .card-item_header img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.card-item .card-item_header button {
+  width: max-content;
+  height: max-content;
+  background-color: transparent;
+  cursor: pointer;
+  transform: rotate(90deg) translateY(-10px);
+}
+
+.card-item .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-item .card-body h4 {
+  width: 120px;
+  line-height: 1;
+}
+
+.card-item .card-body p {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.card-item .card-body .progress {
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-item .card-body .progress .bar {
+  height: 5px;
+  width: var(--progress-percent);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+}
